@@ -38,11 +38,30 @@ Math, Scipy, imageio.v2 được import tuy nhiên không được dùng trong �
 Thuật toán được sử dụng trong bài này là thuật toán biến đổi Logarit (Logarithmic Transformation) <br>
 Biến đổi Logarit là thuật toán được sử dụng để mở rộng các giá trị pixel ở vùng tối (cường độ thấp) và nén các giá trị pixel ở vùng sáng (cường độ cao). Giúp làm nổi bật một số chi tiết của ảnh bị khuất do độ tương phản không đủ. <br>
 Dòng code này dùng để tìm giá trị pixel lớn nhất để chuẩn hóa trong công thức Log
-![Image](https://github.com/user-attachments/assets/ce89f96f-d6e6-4130-83f7-660194248d33)
-Dòng code này bắt đầu sử dụng thuật toán, công thức của thuật toán lên toàn bộ pixel (riêng lẻ không theo khối) <br>
-![Image](https://github.com/user-attachments/assets/a53194ea-175f-4800-b28b-d26bd203e26f)
+![Image](https://github.com/user-attachments/assets/ce89f96f-d6e6-4130-83f7-660194248d33) <br>
+Dòng code này bắt đầu sử dụng thuật toán, áp dụng công thức của thuật toán lên toàn bộ pixel (riêng lẻ không theo khối) <br>
+![Image](https://github.com/user-attachments/assets/a53194ea-175f-4800-b28b-d26bd203e26f) <br>
 
 #Bài 1.4: <br>
+#Công nghệ sử dụng: <br>
+library: <br>
+PIL là thư viện xử lý ảnh trong Python, thường được sử dụng để thao tác ảnh, hỗ trợ mở, chỉnh sửa và chuyển đổi dạng hình ảnh. <br>
+Numpy là thư viện được sử dụng để nhập khẩu với bí danh (alias) là np.<br>
+Matplotlib là thư viện được sử dụng để vẽ đồ thị<br>
+Math, Scipy, imageio.v2 được import tuy nhiên không được dùng trong đoạn code này.<br>
+#Thuật toán sử dụng<br>
+Thuật toán được sử dụng trong bài này là thuật toán Histogram Equalization <br?
+Histogram Euqalization là thuật toán được sử dụng để cải thiện độ tương phản của ảnh xám đối với những bức ảnh quá tối hoặc quá sáng. <br>
+Làm phẳng (flatten) mảng 2D thành mảng 1D
+![Image](https://github.com/user-attachments/assets/a4c79df5-3a39-4974-a7a9-74b2b3690118)
+Tính histogram và các khoảng bin
+![Image](https://github.com/user-attachments/assets/93de2502-1f85-4a3e-bd85-e2d3e16c03b4)
+Tính hàm phân phối tích lũy (CDF)
+![Image](https://github.com/user-attachments/assets/808dc8ea-9f09-4c6a-8431-bde85c41d61d)
+Các giá trị CDF bằng 0 sẽ bị che (mask), phần còn lại được giữ lại trong cdf_m
+![Image](https://github.com/user-attachments/assets/5127e38a-edea-4d5c-8a12-996e8ed4e5e1)
+
+
 
 
 
