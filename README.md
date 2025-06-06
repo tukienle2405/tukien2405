@@ -27,6 +27,22 @@ Sử dụng thuật toán trong đoạn code này để điều chỉnh độ s�
 Trong đoạn code này cho gamma = 0.5 (gamma < 1 thì làm sáng ảnh nếu ảnh gốc bị tối, gamma > 1 thì ngược lại) <br>
 ![Image](https://github.com/user-attachments/assets/e8f81ab2-e7d6-492f-ac8d-2aa438a922ea) <br>
 
+#Bài 1.3: <br>
+#Công nghệ sử dụng: <br>
+library: <br>
+PIL là thư viện xử lý ảnh trong Python, thường được sử dụng để thao tác ảnh, hỗ trợ mở, chỉnh sửa và chuyển đổi dạng hình ảnh. <br>
+Numpy là thư viện được sử dụng để nhập khẩu với bí danh (alias) là np.<br>
+Matplotlib là thư viện được sử dụng để vẽ đồ thị<br>
+Math, Scipy, imageio.v2 được import tuy nhiên không được dùng trong đoạn code này.<br>
+#Thuật toán sử dụng<br>
+Thuật toán được sử dụng trong bài này là thuật toán biến đổi Logarit (Logarithmic Transformation) <br>
+Biến đổi Logarit là thuật toán được sử dụng để mở rộng các giá trị pixel ở vùng tối (cường độ thấp) và nén các giá trị pixel ở vùng sáng (cường độ cao). Giúp làm nổi bật một số chi tiết của ảnh bị khuất do độ tương phản không đủ. <br>
+Dòng code này dùng để tìm giá trị pixel lớn nhất để chuẩn hóa trong công thức Log
+![Image](https://github.com/user-attachments/assets/ce89f96f-d6e6-4130-83f7-660194248d33)
+Dòng code này bắt đầu sử dụng thuật toán, công thức của thuật toán lên toàn bộ pixel (riêng lẻ không theo khối) <br>
+![Image](https://github.com/user-attachments/assets/a53194ea-175f-4800-b28b-d26bd203e26f)
+
+#Bài 1.4: <br>
 
 
 
