@@ -123,7 +123,7 @@ Có 3 thuật toán được sử dụng trong bài này:
 Thuật toán đầu tiên được sử dụng trong bài này là thuật toán 2D Fast Fourier Transform - FFT2
 2D Fast Fourier Transform - FFT2 là thuật toán dùng để chuyển ảnh từ miền không gian sang miền tần số. <br>
 Thuật toán thứ hai được sử dụng trong bài này là Butterworth Lowpass Filter (Bộ lọc thông thấp Butterworth) giúp loại bỏ hoặc làm suy giảm các tần số cao chỉ giữ lại tần số thấp, ngoài ra còn giúp loại bỏ nhiễu hoặc làm ảnh mờ đi. <br>
-Thuật toán thứ ba được sử dụng trong bài này là Biến đổi Fourier ngược (IFFT) giúp chuyển ảnh từ miền tần só trở lại miền không gian sau khi đã áp dụng bộ lọc (nếu chưa áp dụng bộ lọc thì IFFT sẽ tạo lại ảnh gần như là ảnh gốc).
+Thuật toán thứ ba được sử dụng trong bài này là Biến đổi Fourier ngược (IFFT) giúp chuyển ảnh từ miền tần só trở lại miền không gian sau khi đã áp dụng bộ lọc (nếu chưa áp dụng bộ lọc thì IFFT sẽ tạo lại ảnh gần như là ảnh gốc). <br>
 Dòng code này tạo bộ lọc Butterworth theo công thức toán học <br>
 ![Image](https://github.com/user-attachments/assets/219e2bf5-55a2-4998-a32f-ddeb9d7d2b93) <br>
 Dòng code này áp dụng bộ lọc lên phổ Fourier của ảnh (nhân phổ với bộ lọc) <br>
