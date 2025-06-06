@@ -5,6 +5,7 @@ Numpy là thư viện được sử dụng để nhập khẩu với bí danh (a
 Matplotlib là thư viện được sử dụng để vẽ đồ thị
 #Thuật toán sử dụng
 Thuật toán được sử dụng trong bài này là Inversion
+
 ![Image](https://github.com/user-attachments/assets/925c3b46-c216-4b65-b1d1-515d92670bee)
 
 
