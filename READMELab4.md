@@ -67,6 +67,6 @@ Butterworth Highpass Filter (lọc thông cao) <br>
 Tương tự như lowpass, nhưng ngược lại: loại bỏ tần số thấp, giữ lại tần số cao. <br>
 Làm rõ ranh giới, sắc nét chi tiết biên. <br>
 Ứng dụng: Làm sắc ảnh, làm rõ biên. <br>
-![Image](https://github.com/user-attachments/assets/c03e5cf4-3fb6-4061-b158-47233bed6e00)
+![Image](https://github.com/user-attachments/assets/c03e5cf4-3fb6-4061-b158-47233bed6e00) <br>
 #Bài 3 tương tự bài 1 vì cùng sử dụng công nghệ và các thuật toán xử lý ảnh điểm giống nhau. Tuy nhiên, điểm khác biệt là bài 3 áp dụng trên ảnh RGB (với thứ tự kênh màu bị hoán đổi ngẫu nhiên), sau đó chuyển sang ảnh xám, và áp dụng ngẫu nhiên một thuật toán xử lý thay vì cho người dùng chọn. <br>
 #Bài 4 tương tự bài 2 vì cùng sử dụng các công nghệ và thuật toán xử lý ảnh trong miền tần số như FFT và Butterworth. Tuy nhiên, khác biệt nằm ở chỗ bài 4 xử lý ảnh RGB (với kênh màu bị hoán đổi ngẫu nhiên), áp dụng ngẫu nhiên một trong ba phương pháp, và bổ sung thêm bước lọc không gian (Min/Max filter) sau khi biến đổi. <br>
