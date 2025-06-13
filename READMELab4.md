@@ -16,3 +16,4 @@ Mỗi pixel p được biến đổi thành 255 - p.
 Làm sáng vùng tối và tối vùng sáng.
 Ứng dụng: Tạo hiệu ứng âm bản.
 ![Image](https://github.com/user-attachments/assets/ddfa4b93-789b-4334-af9e-8513bdd4ebf2)
+
