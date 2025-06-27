@@ -85,7 +85,7 @@ Tạo hiệu ứng làm méo ảnh, giống như nhìn qua mặt kính cong ho�
    Δx(x,y),Δy(x,y) là độ lệch ngẫu nhiên của từng điểm ảnh <br>
 #Code chính <br>
 ![Image](https://github.com/user-attachments/assets/37ee5594-f70c-49bd-a087-13a85ea3cd26) <br>
-1.7 Biến đổi chung
+1.7 Biến đổi chung <br>
 Mục đích <br>
 Thực hiện biến đổi tọa độ tùy để tạo ra hiệu ứng biến dạng đặc biệt cho hình ảnh <br>
 #Công thức toán học <br>
