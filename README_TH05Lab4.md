@@ -67,16 +67,15 @@ Biến đổi khoảng cách (distance transform) giúp xác định tâm của 
 Gán nhãn vùng tiền cảnh để cung cấp marker đầu vào cho thuật toán watershed.<br>
 Áp dụng thuật toán watershed để phân tách chính xác các vùng chồng lấn.<br>
 #Công thức toán học <br>
-
 #Code chính <br>
 <img width="710" height="422" alt="Image" src="https://github.com/user-attachments/assets/700d41d7-8a70-4572-be56-afa9fb299848" /> <br>
-Chuyển ảnh màu sang ảnh xám để xử lý dễ dàng hơn.<br>
-Dùng ngưỡng Otsu để tạo ảnh nhị phân, tự động tách nền và đối tượng mà không cần chỉ định ngưỡng thủ công.<br>
-Áp dụng phép co ảnh (erosion) để loại bỏ nhiễu và làm co các vùng dính liền, giúp cải thiện độ chính xác phân đoạn.<br>
-Thực hiện biến đổi khoảng cách (distance transform) nhằm xác định tâm (trung tâm) của mỗi vùng đối tượng.<br>
-Phân ngưỡng ảnh khoảng cách để giữ lại các điểm có khoảng cách lớn nhất – chính là tiền cảnh (foreground).<br>
-Gán nhãn các vùng tiền cảnh để tạo marker cho thuật toán Watershed.<br>
-Áp dụng thuật toán Watershed để phân chia chính xác các vùng đối tượng chồng lấn nhau bằng cách mô phỏng nước tràn và chặn lại tại các "đường ranh".<br>
+Chuyển ảnh màu sang ảnh xám để xử lý dễ dàng hơn. (1)<br>
+Dùng ngưỡng Otsu để tạo ảnh nhị phân, tự động tách nền và đối tượng mà không cần chỉ định ngưỡng thủ công.(2)<br>
+Áp dụng phép co ảnh (erosion) để loại bỏ nhiễu và làm co các vùng dính liền, giúp cải thiện độ chính xác phân đoạn.(3)<br>
+Thực hiện biến đổi khoảng cách (distance transform) nhằm xác định tâm (trung tâm) của mỗi vùng đối tượng.(4)<br>
+Phân ngưỡng ảnh khoảng cách để giữ lại các điểm có khoảng cách lớn nhất – chính là tiền cảnh (foreground).(5)<br>
+Gán nhãn các vùng tiền cảnh để tạo marker cho thuật toán Watershed.(6)<br>
+Áp dụng thuật toán Watershed để phân chia chính xác các vùng đối tượng chồng lấn nhau bằng cách mô phỏng nước tràn và chặn lại tại các "đường ranh".(7)<br>
 
 2.3 Biến đổi đối tượng trong ảnh <br>
 2.3.1 Sử dụng binary_dilation <br>
