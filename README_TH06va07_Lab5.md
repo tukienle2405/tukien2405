@@ -55,74 +55,7 @@ Phát hiện biên: Làm nổi bật vùng có thay đổi cường độ. <br>
 Hiển thị kết quả: Hiển thị ảnh thể hiện vùng biên. <br>
 #Công thức toán học <br>
 B(x,y) = |I(x,y) - I(x,y) + 1| <br>
-I(x,y) là giá trị cường độ pixel trong ảnh gốc <br>
-I(x,y) + 1 là giá trị cường độ pixel tại vị trí dịch sang 1 <br>
-B(x,y) là kết quả thể hiện sự thay đổi tại biên. <br>
-Ví dụ:
-I ban đầu = [120,125,130]
-I thứ = [115, 120,135]
-Suy ra B = [5, 5, 5], cho thấy mức độ thay đổi đều nhau giữa hai ảnh, nghĩa là biên có mặt tại mọi ví trí nhưng không có điểm mạnh. <br>
-#Code chính <br>
-<img width="443" height="33" alt="Image" src="https://github.com/user-attachments/assets/7170b83e-5c46-4e5c-9a97-15acad8c2483" /> <br>
-Đây là dòng thực hiện phép trừ giữa ảnh gốc và ảnh dịch chuyển, từ đó phát hiện biên thông qua sự thay đổi cường độ pixel. <br>
-
-2.3 Dò tìm cạnh với Sobel Filter <br>
-Mục đích <br>
-Đọc ảnh: Mở ảnh gốc bằng Pillow. <br>
-Tính gradient theo trục x: Dùng toán tử Sobel theo phương dọc (axis=0). <br>
-Tính gradient theo trục y: Dùng toán tử Sobel theo phương ngang (axis=1). <br>
-Tổng hợp biên: Cộng độ lớn gradient hai hướng để làm nổi bật rìa đối tượng. <br>
-Hiển thị kết quả: Hiển thị ảnh biên sau khi xử lý. <br>
-#Công thức toán học <br>
-#Code chính <br>
-<img width="258" height="87" alt="Image" src="https://github.com/user-attachments/assets/b5b90ddf-0478-4816-aef3-de41921d1dff" /> <br>
-Những đoạn code trên là phần thực hiện tính toán biên bằng toán tử Sobel theo cả hai hướng x và y, sau đó cộng lại để làm nổi bật vùng biên trong ảnh. <br>
-
-2.4 BXác định góc của đối tượng <br>
-
-Mục đích <br>
-Đọc ảnh: Mở ảnh gốc bằng Pillow. <br>
-Xác định các điểm góc – nơi có sự thay đổi cường độ mạnh theo cả hai chiều (x và y). <br>
-Các điểm góc là đặc trưng quan trọng trong việc so khớp ảnh, nhận dạng vật thể, tái tạo 3D. <br>
-Ứng dụng trong theo dõi chuyển động, ghép ảnh (panorama), phát hiện đối tượng. <br>
-#Công thức toán học <br>
-#Code chính <br>
-<img width="286" height="311" alt="Image" src="https://github.com/user-attachments/assets/cc61f812-c2b4-4cae-bca9-9b8e781734af" /> <br>
-Tính gradient Ix, Iy. <br>
-Làm trơn các thành phần ma trận cấu trúc. <br>
-Tính giá trị phản hồi R để xác định điểm góc. <br>
-
-2.5 Dò tìm hình dạng cụ thể trong ảnh với Hough Transform <br>
-2.5.1 Dò tìm đường thẳng trong ảnh <br>
-
-Mục đích <br>
-Phát hiện các đường thẳng trong ảnh bằng cách biến đổi từ không gian ảnh sang không gian tham số (Hough space). <br>
-Tích lũy các điểm ảnh sáng theo dạng tuyến tính để xác định vị trí và hướng của các đường thẳng. <br>
-Ứng dụng trong nhận diện đường biên, mép vật thể, tách biên ảnh kỹ thuật (như ảnh bản vẽ, sơ đồ). <br>
-#Công thức toán học <br>
-p = x.cos(0) + y.sin(0) <br>
-x,y là tọa độ điểm pixel trong ảnh <br>
-0 là góc của đường thẳng <br>
-p là khoảng cách từ gốc tọa độ đến đường thẳng theo phương vuông góc <br>
-#Code chính <br>
-<img width="472" height="424" alt="Image" src="https://github.com/user-attachments/assets/de9c3d5b-974a-4e49-ba16-01e8ca88e413" /> <br>
-Lặp qua các điểm ảnh sáng (giá trị lớn) <br>
-Tính ρ cho từng 𝜃 <br>
-Tăng giá trị tại vị trí tương ứng trong không gian Hough (ho) <br>
-
-2.5.2 Dò tìm đường tròn trong ảnh <br>
-
-Mục đích <br>
-Chuyển ảnh màu sang ảnh xám, tạo đầu vào xử lý.<br>
-Xác định các điểm góc trong ảnh – nơi có sự thay đổi cường độ lớn theo cả hai hướng (x và y).
-Làm nổi bật các điểm đặc trưng dùng cho việc nhận dạng, theo dõi chuyển động hoặc khớp ảnh.
-Ứng dụng trong thị giác máy tính như ghép ảnh panorama, nhận diện đối tượng, phân tích cảnh.
-#Công thức toán học <br>
-#Code chính <br>
-<img width="519" height="114" alt="Image" src="https://github.com/user-attachments/assets/382b151a-afbc-45e9-9303-486c4f58d8b6" /> <br>
-rgb2gray(data): chuyển ảnh màu sang ảnh xám để dễ phát hiện góc. <br>
-corner_harris(image_gray, k=0.001): áp dụng thuật toán Harris Corner Detector để phát hiện các điểm góc trong ảnh. <br>
-
+I(x,y) là giá tr07
 2.6 Tìm điểm giống nhau của ảnh <br>
 Mục đích <br>
 Phát hiện các điểm góc (corner) trong hai ảnh bằng Harris Corner Detector. <br>
